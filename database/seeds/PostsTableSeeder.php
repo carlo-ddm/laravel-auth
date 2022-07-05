@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Database\Seeder;
+// Utilizzo faker
+use Faker\Generator as Faker;
+// Utilizzo il model 'Post'
+use App\Post;
+
+// Non serve impostare qui Slug: il relativo procedimento di impostazione e la sua logica viene gestita direttamente per il singolo post (quindi nel model). Il seeder prende lo slug univoco generato nel Model (qui viene solo richiamato). Quindi qui non serve: ---> use Illuminate\Support\Str; <---
+
+
 
 class PostsTableSeeder extends Seeder
 {
@@ -9,8 +17,14 @@ class PostsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        //
+        for($i = 0; $i < 10; $i++){
+            $new_post = new Post();
+            $new_post->title = 'Ciao!';
+            // Generazione slug
+            $new_post->slug = Post::generateSlug($new_post->title);
+            $new_post->content = 'Un assolato giorno di luglio! Caldo rovente, aria condizionata! Passaggio n.14 dell\'esercizio';
+        }
     }
 }
