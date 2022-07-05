@@ -24,7 +24,8 @@ class PostsTableSeeder extends Seeder
             $new_post->title = 'Ciao!';
             // Generazione slug
             $new_post->slug = Post::generateSlug($new_post->title);
-            $new_post->content = 'Un assolato giorno di luglio! Caldo rovente, aria condizionata! Passaggio n.14 dell\'esercizio';
+            $new_post->content = $faker->text();
+            $new_post->save();
         }
     }
 }
