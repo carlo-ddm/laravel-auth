@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class Post extends Model
 {
-    public static function genrateSlug($title){
+    public static function generateSlug($title){
         $slug = Str::slug($title, '-');
         // Creo la base dello slug
         $slug_base = $slug;
