@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     {{-- Qui do l'indicazione di logged in NB. Chiaramente può essere customizzata --}}
-                    {{ __('You are logged in!') }}
+                    <h6>Benvenuto {{ Auth::user()->name }}</h6>
                 </div>
             </div>
         </div>
