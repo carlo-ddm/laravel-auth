@@ -13,10 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+// 'welcome' is public homepage. It's renamed 'home'
+// 'home' is admin page. It's renamed in this way
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('admin');
+Route::get('/admin', 'HomeController@index')->name('admin');
