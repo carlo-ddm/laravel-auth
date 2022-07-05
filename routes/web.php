@@ -39,6 +39,9 @@ Route::middleware('auth')
     ->name('admin.')
     ->group(function(){
         Route::get('/', 'HomeController@index')->name('index');
+
+        // Riporto le rotte della CRUD
+        Route::resource('posts', 'PostController');
     });
 
 // ->get('/admin', 'Admin\HomeController@index')->name('admin');
