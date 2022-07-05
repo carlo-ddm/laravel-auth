@@ -32,4 +32,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('admin');
+// NB. back slash -> Admin\Home...
+Route::middleware('auth')->get('/admin', 'Admin\HomeController@index')->name('admin');
