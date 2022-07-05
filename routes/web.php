@@ -23,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// 'welcome' is public homepage. It's renamed 'home'
-// 'home' is admin page. It's renamed in this way
+// 'welcome' è 'Pagina pubblica'. Rinominata 'home'
+// 'home' è pagina 'admin'. Rinominata in questo modo
 
 Route::get('/', function () {
     return view('guest.welcome');

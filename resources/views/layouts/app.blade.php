@@ -1,3 +1,22 @@
+{{-- 1. installarre il progetto
+2. installare la ui auth
+3. creare un db e configurare env
+4. effettuare le migration di default
+5. spostare la view home in ina cartella admin
+6. spostare la view welcome in ina cartella guest
+7. correggere dove vengono caricate le view
+8. modificare la rotta home con admin
+9. modificare la rotta HOME in RouteServiceProvider
+10. creare un HomeController dentro il namespace Admin e restituire in index la view admin.home
+11. proteggere la rotta admin col middleware da route e non dal costruttore (eliminare il HomeController di default)
+12. raggruppare le rotte protette con middleware e aggiungere prifix, name, namespace
+13. creare la migration dei posts
+14. creare i seeder con slug univoco come funzione statica in Post
+15. crerare il reosurce controller dentro il namespace Admin
+16. proteggere tutte le rotte resource dentro il gruppo admin
+17. creare la index della crud con i post
+18. creare un link all’elenco dei post nel menu admin accessibile solo all’utente loggato --}}
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>

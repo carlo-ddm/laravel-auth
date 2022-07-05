@@ -21,6 +21,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    // Copio la rotta per inserirla nell'HomeController creato nella cartella 'Admin'
     public function index()
     {
         return view('admin.home');
