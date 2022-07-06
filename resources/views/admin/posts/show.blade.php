@@ -1,29 +1,27 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
-    <h1>Index Crud</h1>
-
     <table class="table">
         <thead class="thead-dark">
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Titolo</th>
-            <th scope="col">Vai</th>
+            <th scope="col">Contenuto</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
-            @foreach ($posts as $post)
+
             <tr>
               <th scope="row">{{$post->id}}</th>
               <td>{{$post->title}}</td>
+              <td>{{$post->content}}</td>
               <td>
-                  <a class="btn btn-primary" href="{{route('admin.posts.show', $post)}}" >SHOW</a>
+                <a class="btn btn-dark" href="{{route('admin.posts.index')}}">BACK</a>
               </td>
             </tr>
-            @endforeach
+
         </tbody>
       </table>
-
 </div>
 @endsection
