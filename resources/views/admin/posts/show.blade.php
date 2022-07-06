@@ -17,7 +17,7 @@
               <td>{{$post->title}}</td>
               <td>{{$post->content}}</td>
               <td>
-                <a class="btn btn-dark" href="{{route('admin.posts.index')}}">BACK</a>
+                <a class="btn btn-outline-dark" href="{{route('admin.posts.index')}}">BACK</a>
               </td>
             </tr>
 

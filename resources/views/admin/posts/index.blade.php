@@ -18,8 +18,9 @@
               <th scope="row">{{$post->id}}</th>
               <td>{{$post->title}}</td>
               <td>
-                  <a class="btn btn-primary" href="{{route('admin.posts.show', $post)}}" >SHOW</a>
-              </td>
+                  <a class="btn btn-outline-primary" href="{{route('admin.posts.show', $post)}}" >SHOW</a>
+                  <a class="btn btn-outline-success" href="{{route('admin.posts.edit', $post)}}" >MODIFICA</a>
+            </td>
             </tr>
             @endforeach
         </tbody>
