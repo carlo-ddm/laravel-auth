@@ -18,6 +18,11 @@
               <td>{{$post->content}}</td>
               <td>
                 <a class="btn btn-outline-dark" href="{{route('admin.posts.index')}}">BACK</a>
+                <form action="{{route('admin.posts.destroy', $post)}}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-outline-danger">DELETE</button>
+                </form>
               </td>
             </tr>
 

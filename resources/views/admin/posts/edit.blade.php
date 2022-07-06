@@ -14,7 +14,7 @@
         @endif
     </div> --}}
 
-    <form id="crate" action="{{route('admin.posts.update', $post)}}" method="POST">
+    <form id="crate" action="{{route('admin.posts.update',$post)}}" method="POST">
         @method('PUT')
         @csrf
         <div class="form-group">
@@ -23,7 +23,9 @@
           class="form-control"
           id="title"
           name="title"
-          placeholder="Titolo">
+          placeholder="Titolo"
+          value="{{old('title',$post->title)}}">
+
         </div>
 
         <div class="form-group">
@@ -32,10 +34,10 @@
           id="content"
           name="content"
           cols="30"
-          rows="10"></textarea>
+          rows="10"
+          value="{{old('content',$post->content)}}"></textarea>
         </div>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-outline-success">CAMBIA</button>
       </form>
   </form>
 @endsection

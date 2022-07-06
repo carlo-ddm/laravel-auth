@@ -34,7 +34,7 @@
           rows="10"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-outline-primary">CREA</button>
       </form>
   </form>
 @endsection
