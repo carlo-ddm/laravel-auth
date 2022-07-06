@@ -1,9 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    {{-- <div>
-        @if ($errors->any()) --}}
-            {{-- @dump($errors->any())
+    <div>
+        @if ($errors->any())
             <div class="col-8 offset-2 alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -12,26 +11,33 @@
                 </ul>
             </div>
         @endif
-    </div> --}}
+    </div>
 
     <form id="crate" action="{{route('admin.posts.store')}}" method="POST">
         @csrf
         <div class="form-group">
           <label for="title">Titolo</label>
           <input type="text"
-          class="form-control"
+          class="form-control @error('title') is-invalid @enderror"
           id="title"
           name="title"
           placeholder="Titolo">
+          @error('title')
+          <p class="error-msg">{{$message}}</p>
+          @enderror
         </div>
 
         <div class="form-group">
           <label for="content">Scrivi</label>
-          <textarea class="form-control"
+          <textarea class="form-control @error('content') is-invalid
+          @enderror"
           id="content"
           name="content"
           cols="30"
           rows="10"></textarea>
+          @error('content')
+          <p class="error-msg">{{$message}}</p>
+          @enderror
         </div>
 
         <button type="submit" class="btn btn-outline-primary">CREA</button>
