@@ -29,7 +29,7 @@ class PostRequest extends FormRequest
         ];
     }
 
-    public function messagges()
+    public function messages()
     {
         return [
             'title.required' => 'Campo obbligatorio',

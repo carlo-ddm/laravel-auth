@@ -21,7 +21,8 @@
           class="form-control @error('title') is-invalid @enderror"
           id="title"
           name="title"
-          placeholder="Titolo">
+          placeholder="Titolo"
+          value="{{old('title')}}">
           @error('title')
           <p class="error-msg">{{$message}}</p>
           @enderror
@@ -34,7 +35,8 @@
           id="content"
           name="content"
           cols="30"
-          rows="10"></textarea>
+          rows="10"
+          value="{{old('content')}}"></textarea>
           @error('content')
           <p class="error-msg">{{$message}}</p>
           @enderror

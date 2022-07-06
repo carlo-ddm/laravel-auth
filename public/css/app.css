@@ -10953,3 +10953,8 @@ a.text-dark:focus {
   }
 }
 
+.error-msg {
+  color: red;
+  font-size: 0.8rem;
+}
+
